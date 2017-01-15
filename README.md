@@ -1,13 +1,18 @@
 CDM: The Console Display Manager
 ================================
 
-New version 0.7: 
+New version 0.7:
 
-	- removed consolekit support 
+	- added support for Wayland
+	- moved the rc file path to `.config/cdm/rc`
+	- fixed a bug that made `dialog` bork when TTY permissions were bogus
+	- replaced every `/bin/bash` occurence with `/usr/bin/env bash`, making it easier to make it work on BSDs.
+
+	- removed consolekit support
 	- removed xtty
 	- removed altstartx
 	- cdmrc edited for new version
-	- cdm-xlaunch removed 
+	- cdm-xlaunch removed
 
 Invocation
 ----------
@@ -20,11 +25,12 @@ cdm tries to source configuration files in this order, and uses the first
 existing one:
 
     [RCFILE specified on command line]
+    $HOME/.config/cdm/rc
     $HOME/.cdmrc
     /etc/cdmrc
 
 To autostart cdm when you log in your account, copy the content of
-/usr/share/doc/cdm/profile.sh to the tail of your shell profile (~/.profile,
+/usr/share/doc/cdm/zzz-cdm.sh to the tail of your shell profile (~/.profile,
 etc.).
 
 
@@ -47,6 +53,11 @@ Thanks to:
     Profjim         several incredibly useful patches
     lambchops468    consolekit and hibernation patches
     CasperVector    Massive rearchitecturing and code sanitation
+    pale3           Forking to remove some shit not needed anymore
+    PoroCYon        Forking once more to add proper Wayland support,
+                    moved cdmrc to .config, fixed a bug concerning the
+                    --stdout flag of `dialog`, replaced every /bin/bash
+                    occurence with /usr/bin/env bash so it works for BSDs, too
 
 Licensed under GPLv2+
 

@@ -8,9 +8,9 @@
 
 pkgname=cdm-git
 _pkgname="cdm"
-pkgver=r143.5325db2
+pkgver=r144.4dc7364
 _pkgver=0.8
-pkgrel=2
+pkgrel=1
 pkgdesc="The Console Display Manager"
 arch=('any')
 url="https://github.com/PoroCYon/cdm"
@@ -39,6 +39,6 @@ package() {
 
   cd "$srcdir/$_pkgname/src"
   install -Dm755 -T cdm "$pkgdir/usr/bin/cdm"
-  install -Dm644 -T rc "$pkgdir/etc/cdmrc"
+  install -Dm644 -T cdmrc "$pkgdir/etc/cdmrc"
   install -Dm755 -T profile.sh "$pkgdir/etc/profile.d/zzz-cdm.sh"
 }

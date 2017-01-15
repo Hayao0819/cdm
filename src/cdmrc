@@ -36,7 +36,7 @@
 # Default to unset, causing dialog(1) to use the system wide default.
 # See /usr/share/doc/cdm/themes for some nice choices.
 dialogrc=/usr/share/doc/cdm/themes/cdm
-#dialogrc=/home/$USER/.config/cdm/themes/miromiro
+#dialogrc=$XDG_CONFIG_HOME/cdm/themes/miromiro
 
 # Index of the first item in the menu.
 countfrom=0

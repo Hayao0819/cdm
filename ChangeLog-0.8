@@ -1,7 +1,27 @@
+Version 0.8 (2017-01-15)
+
+	* Wayland support:
+
+	A new classification, 'W' (Wayland) has been added. It behaves exactly
+	like 'C', but the X dependencies are now optional.
+
+	* Moved cdmrc to XDG path:
+
+	`~/.cdmrc` has been moved to `~/.config/cdm/rc`. The old path is still
+	checked, for backwards compatibility.
+
+	* Bugfixes:
+
+	Due to bogus TTY permissions, `dialog` would fail, because of the
+	`--stdout` flag.
+
+	On some BSDs, `bash` is found at /usr/bin/bash, but some scripts were
+	using /bin/bash instead.
+
 Version 0.7 (2014-17-01)
-	
+
 	* Alternative startx as (altstartx):
-	
+
 	Another way then usual, or alternative way was remove as this is not needed
 	anymore. If situation tells otherwise I'll return behavior.
 
@@ -10,10 +30,10 @@ Version 0.7 (2014-17-01)
 	Specified var's and all coresponded functions are removed as they are not
 	needed.
 	Explenation comes:
-		
+
 		consolekit - is removed as it's obsolte and replaced by systemd logind
 		thus not needed.
-		
+
 		cktimeout - there is no consolekit so cktimeout is sufficient
 
 		xtty - as of xorg 1.16 rootless login is introduced. There is no way to
@@ -25,11 +45,10 @@ Version 0.7 (2014-17-01)
 	Executing X is now inside cdm itslef. Distributing cdm package with two
 	files cdm and cdm-xclaunh is now stupid because cdm-xlaunch is now empty as
 	consolekit is completly removed.
-		
+
 	* cdmrc:
-	
+
 	removed nonexistant variables
-	
 
 Version 0.6 (2012-04-08)
 

@@ -1,12 +1,14 @@
 CDM: The Console Display Manager
 ================================
 
-New version 0.7:
+New version 0.8:
 
 	- added support for Wayland
 	- moved the rc file path to `.config/cdm/rc`
 	- fixed a bug that made `dialog` bork when TTY permissions were bogus
 	- replaced every `/bin/bash` occurence with `/usr/bin/env bash`, making it easier to make it work on BSDs.
+
+Version 0.7:
 
 	- removed consolekit support
 	- removed xtty

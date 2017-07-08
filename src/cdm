@@ -70,8 +70,8 @@ if [[ -n "$1" ]]; then
     else
         exitwerror "config file \`$1' does not exist."
     fi
-elif [[ -f "$XDG_CONFIG_HOME/cdm/cdmrc" ]]; then
-    source "$XDG_CONFIG_HOME/cdm/cdmrc"
+elif [[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/cdm/cdmrc" ]]; then
+    source "${XDG_CONFIG_HOME:-$HOME/.config}/cdm/cdmrc"
 elif [[ -f "$HOME/.cdmrc" ]]; then
     source "$HOME/.cdmrc"
 elif [[ -f /etc/cdmrc ]]; then

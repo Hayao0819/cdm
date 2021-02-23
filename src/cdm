@@ -64,8 +64,7 @@ yesno()
 # Source cdm configurations.
 
 if [[ -n "$1" ]]; then
-    if [[ -f "$1" ]]
-    then
+    if [[ -f "$1" ]]; then
         source "$1"
     else
         exitwerror "config file \`$1' does not exist."
